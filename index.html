@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>William Barrie</title>
+<meta name="description" content="William Barrie — Junior Research Fellow at Magdalene College, Cambridge. Ancient DNA, evolutionary genetics, and the history of human disease.">
+
+<!-- ================================================================
+     EDITING GUIDE
+     ----------------------------------------------------------------
+     Most things you'll want to change live in clearly-labelled
+     sections below. Search for: [EDIT] to find them.
+
+       1. Replace the headshot:           [EDIT: PORTRAIT]
+       2. Update the bio:                 [EDIT: ABOUT]
+       3. Research themes / future work:  [EDIT: RESEARCH]
+       4. Add or remove publications:     [EDIT: PUBLICATIONS]
+       5. Talks:                          [EDIT: TALKS]
+       6. Update press coverage:          [EDIT: PRESS]
+       7. Awards:                         [EDIT: AWARDS]
+       8. Change contact details:         [EDIT: CONTACT]
+       9. Tweak colours / fonts:          [EDIT: THEME]
+
+     PUBLICATIONS — joint first authorship
+     ----------------------------------------------------------------
+     Mark joint-first co-authors with class="jf" wrapping a § symbol
+     after the surname, e.g.
+        Irving-Pease, E. K.<span class="jf">§</span>,
+        <span class="you">Barrie, W.<span class="jf">§</span></span>
+     The footer of the publications section explains the symbol.
+
+     Use class="featured" on a <li> to highlight a paper with a
+     coloured rule on the left.
+     ================================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<style>
+/* ================================================================
+   [EDIT: THEME] — colours, fonts, type scale
+   ================================================================ */
+:root {
+  --paper:        #f5f0e6;
+  --paper-deep:   #ebe4d4;
+  --ink:          #1c1a17;
+  --ink-soft:     #4a443c;
+  --ink-mute:     #847d72;
+  --rule:         #c9bfae;
+  --accent:       #7a2e1e;
+  --accent-soft:  #a4624f;
+
+  --serif-display: 'Newsreader', 'Source Serif 4', Georgia, serif;
+  --serif-body:    'Source Serif 4', 'Newsreader', Georgia, serif;
+
+  --measure: 34rem;
+  --gutter:  2.5rem;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif-body);
+  font-weight: 400;
+  font-feature-settings: "kern", "liga", "onum";
+  line-height: 1.55;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.1  0 0 0 0 0.1  0 0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size .25s ease, color .25s ease;
+}
+a:hover { color: var(--accent); background-size: 100% 2px; }
+
+/* ----------------------------------------------------------------
+   Layout shell
+   ---------------------------------------------------------------- */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem 6rem;
+}
+
+/* ----------------------------------------------------------------
+   Masthead
+   ---------------------------------------------------------------- */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  font-family: var(--serif-body);
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.masthead .mark { font-weight: 500; }
+.masthead nav a {
+  margin-left: 1.6rem;
+  background: none;
+  color: var(--ink-soft);
+}
+.masthead nav a:hover { color: var(--accent); background: none; }
+
+/* ----------------------------------------------------------------
+   Hero
+   ---------------------------------------------------------------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: var(--gutter);
+  align-items: end;
+  margin-bottom: 5.5rem;
+}
+.hero h1 {
+  font-family: var(--serif-display);
+  font-weight: 500;
+  font-size: clamp(3.2rem, 7vw, 5.4rem);
+  font-variation-settings: "opsz" 60;
+  line-height: .96;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+.hero .role {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+  max-width: 32rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.hero .role .sep {
+  display: inline-block;
+  width: 1.4rem;
+  border-top: 1px solid var(--ink-mute);
+  margin: 0 .35rem .25rem;
+  vertical-align: middle;
+}
+
+/* [EDIT: PORTRAIT] */
+.portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--paper-deep);
+  overflow: hidden;
+  filter: grayscale(15%) contrast(1.02);
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.portrait .placeholder {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: var(--serif-display);
+  font-style: italic;
+  color: var(--ink-mute);
+  font-size: .9rem;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px dashed var(--rule);
+}
+.portrait::after {
+  content: "";
+  position: absolute; inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------------
+   Sections
+   ---------------------------------------------------------------- */
+section.block {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--gutter);
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+section.block > .label {
+  font-family: var(--serif-body);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  padding-top: .35rem;
+}
+section.block > .label .num {
+  display: block;
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--accent);
+  margin-bottom: .4rem;
+}
+section.block > .body { max-width: 44rem; }
+section.block h2 {
+  font-family: var(--serif-display);
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.6rem;
+}
+section.block p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 1.1rem;
+  max-width: var(--measure);
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+section.block p.lead {
+  font-family: var(--serif-display);
+  font-size: 1.32rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+section.block p.lead::first-letter {
+  font-family: var(--serif-display);
+  float: left;
+  font-size: 4.2rem;
+  line-height: .9;
+  padding: .35rem .55rem 0 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+section.block h3 {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin: 2rem 0 .6rem;
+}
+section.block h4 {
+  font-family: var(--serif-body);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 600;
+  margin: 2.2rem 0 1rem;
+}
+
+/* ----------------------------------------------------------------
+   Research interests grid
+   ---------------------------------------------------------------- */
+.interests {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.2rem;
+}
+.interests > div {
+  border-top: 1px solid var(--rule);
+  padding-top: .85rem;
+}
+.interests h4 {
+  font-family: var(--serif-display);
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0 0 .3rem;
+  letter-spacing: .01em;
+  text-transform: none;
+  color: var(--ink);
+}
+.interests p {
+  font-size: .92rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------------
+   Publications
+   ---------------------------------------------------------------- */
+.pubs { margin: 1.2rem 0 0; padding: 0; list-style: none; }
+.pubs li {
+  position: relative;
+  padding: 1.4rem 0 1.4rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.pubs li:last-child { border-bottom: none; }
+.pubs .meta {
+  display: block;
+  font-family: var(--serif-body);
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: .4rem;
+}
+.pubs .title {
+  font-family: var(--serif-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.3;
+  display: block;
+  margin-bottom: .35rem;
+}
+.pubs .authors { color: var(--ink-soft); }
+.pubs .you { color: var(--ink); font-weight: 600; }
+.pubs .jf {
+  color: var(--accent);
+  font-weight: 500;
+  font-style: normal;
+  margin-left: 1px;
+}
+.pubs .venue { font-style: italic; }
+.pubs .links {
+  display: block;
+  margin-top: .55rem;
+  font-size: .85rem;
+  color: var(--ink-mute);
+  letter-spacing: .04em;
+}
+.pubs .links a {
+  margin-right: 1.1rem;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+.pubs li.featured {
+  padding-left: 1.4rem;
+  margin-left: -1.4rem;
+}
+.pubs li.featured::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 1.7rem; bottom: 1.5rem;
+  width: 2px;
+  background: var(--accent);
+}
+.pubs li.featured .meta { color: var(--accent); }
+.pubs-note {
+  font-size: .82rem;
+  color: var(--ink-mute);
+  margin-top: 1.2rem;
+  font-style: italic;
+}
+.pubs-note .jf { color: var(--accent); font-style: normal; }
+
+/* ----------------------------------------------------------------
+   Talks
+   ---------------------------------------------------------------- */
+.talks { margin: 1rem 0 0; padding: 0; list-style: none; }
+.talks li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.4rem;
+  padding: .7rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: .98rem;
+  line-height: 1.45;
+}
+.talks li:last-child { border-bottom: none; }
+.talks .when {
+  font-family: var(--serif-body);
+  font-size: .76rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  padding-top: .15rem;
+}
+.talks .what { color: var(--ink); }
+.talks .where {
+  display: block;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .94rem;
+}
+.talks .keynote {
+  display: inline-block;
+  font-family: var(--serif-body);
+  font-size: .65rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 0 .45rem;
+  margin-left: .35rem;
+  border: 1px solid var(--accent);
+  vertical-align: 2px;
+}
+
+/* ----------------------------------------------------------------
+   Press
+   ---------------------------------------------------------------- */
+.press { margin: 1rem 0 0; padding: 0; list-style: none; }
+.press li {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.2rem;
+  padding: .55rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: .96rem;
+  line-height: 1.5;
+}
+.press li:last-child { border-bottom: none; }
+.press .outlet {
+  font-family: var(--serif-display);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ----------------------------------------------------------------
+   Awards
+   ---------------------------------------------------------------- */
+.awards { margin: 1rem 0 0; padding: 0; list-style: none; }
+.awards li {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.2rem;
+  padding: .65rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: .98rem;
+  line-height: 1.5;
+}
+.awards li:last-child { border-bottom: none; }
+.awards .yr {
+  font-family: var(--serif-body);
+  font-size: .76rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  padding-top: .15rem;
+}
+
+/* ----------------------------------------------------------------
+   Contact
+   ---------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+}
+.contact-grid dt {
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: .2rem;
+}
+.contact-grid dd {
+  margin: 0 0 .9rem;
+  font-size: 1rem;
+  font-family: var(--serif-display);
+}
+
+/* ----------------------------------------------------------------
+   Footer
+   ---------------------------------------------------------------- */
+footer {
+  margin-top: 5rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  font-size: .76rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+/* ----------------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------------- */
+@media (max-width: 820px) {
+  .page { padding: 2rem 1.4rem 4rem; }
+  .masthead { flex-direction: column; align-items: flex-start; gap: .8rem; }
+  .masthead nav a:first-child { margin-left: 0; }
+  .masthead nav a { margin-left: 0; margin-right: 1.2rem; }
+  .hero { grid-template-columns: 1fr; gap: 2.2rem; }
+  .portrait { max-width: 280px; }
+  section.block { grid-template-columns: 1fr; gap: 1.2rem; padding: 2.5rem 0; }
+  section.block > .label { padding-top: 0; }
+  .interests { grid-template-columns: 1fr; }
+  .press li, .talks li, .awards li { grid-template-columns: 1fr; gap: .2rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { background: white; }
+  .masthead nav, footer { display: none; }
+  section.block { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <span class="mark">William Barrie</span>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#press">In the press</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>William<br>Barrie<em>.</em></h1>
+      <p class="role">
+        Junior Research Fellow at Magdalene College, Cambridge
+        <span class="sep"></span>
+        ancient DNA, evolutionary genetics, and the history of human disease
+      </p>
+    </div>
+    <!-- [EDIT: PORTRAIT] -->
+    <figure class="portrait">
+      <img src="portrait.jpg" alt="William Barrie">
+    </figure>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- I. About             [EDIT: ABOUT]                           -->
+  <!-- ============================================================ -->
+  <section class="block" id="about">
+    <div class="label"><span class="num">I.</span>About</div>
+    <div class="body">
+      <h2>A geneticist working between the deep past and the clinic.</h2>
+
+      <p class="lead">
+        I study how thousands of years of human migration, lifestyle change
+        and infectious disease have shaped the genetic architecture of
+        the diseases we live with today. My work sits at the meeting
+        point of ancient DNA, statistical genetics and evolutionary
+        medicine.
+      </p>
+
+      <p>
+        I am a Neville Junior Research Fellow at Magdalene College and
+        work in Richard Durbin's group in the Department of Genetics at
+        Cambridge. I read Natural Sciences at Clare College, Cambridge,
+        and completed my PhD at Pembroke College in 2023 under Eske
+        Willerslev, with co-supervision from Rasmus Nielsen (UC Berkeley)
+        and Daniel Lawson (Bristol). Before returning to Cambridge I held
+        postdoctoral positions in the Cambridge Department of Genetics
+        and at the GLOBE Institute in Copenhagen.
+      </p>
+
+      <p>
+        I was first or joint-first author on three of the four papers
+        that appeared on the cover of <i>Nature</i> in January 2024,
+        including the lead study tracing the elevated risk of multiple
+        sclerosis in northern Europe to positive selection in Bronze Age
+        steppe pastoralists. The papers were covered widely in the
+        international press: BBC television and radio, ITV News, the
+        <i>Guardian</i>, the <i>New York Times</i>, the
+        <i>Washington Post</i>, the <i>Financial Times</i>, the
+        <i>Economist</i>, and several hundred further outlets.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- II. Research          [EDIT: RESEARCH]                       -->
+  <!-- ============================================================ -->
+  <section class="block" id="research">
+    <div class="label"><span class="num">II.</span>Research</div>
+    <div class="body">
+      <h2>The evolutionary biography of complex disease.</h2>
+
+      <p>
+        Two questions sit at the centre of my research. Why do modern
+        populations carry such high frequencies of disease-associated
+        genetic variants? And why are those variants so poorly suited to
+        the environments we now inhabit? Answering them well demands
+        looking far beyond present-day data — to the lifestyles,
+        pathogens and migrations of our ancestors over the last ten
+        thousand years.
+      </p>
+
+      <h3>Current threads</h3>
+
+      <div class="interests">
+        <div>
+          <h4>Ancient DNA &amp; selection</h4>
+          <p>Detecting and dating signatures of natural selection across
+          tens of thousands of imputed ancient genomes from Eurasia.</p>
+        </div>
+        <div>
+          <h4>Polygenic risk through time</h4>
+          <p>Reconstructing how the genetic architecture of complex
+          traits has shifted across prehistory, and how local ancestry
+          can sharpen modern polygenic prediction.</p>
+        </div>
+        <div>
+          <h4>Autoimmune evolution</h4>
+          <p>Why are diseases such as MS, rheumatoid arthritis and type 1
+          diabetes so common in northern Europe? An evolutionary account
+          rooted in pathogen-driven selection.</p>
+        </div>
+        <div>
+          <h4>HLA &amp; pathogen co-evolution</h4>
+          <p>The evolution of the human immune system as a long
+          conversation with the pathogens our ancestors lived alongside.</p>
+        </div>
+        <div>
+          <h4>Metabolic adaptation</h4>
+          <p>Selection on diet-linked variants from the Neolithic
+          onwards, and the metabolic legacies it has left in modern
+          populations.</p>
+        </div>
+        <div>
+          <h4>Methods at the interface</h4>
+          <p>Combining ancient-DNA reference panels, large-scale GWAS
+          and biobank data to extract evolutionary signal from
+          polygenic disease.</p>
+        </div>
+      </div>
+
+      <h3>Looking ahead</h3>
+      <p>
+        My current work is moving in two directions. The first
+        broadens the same evolutionary lens beyond autoimmunity to
+        cardio-metabolic disease, biomarkers and other complex traits,
+        and develops new methods for tracing fine-scale ancestry
+        through deep time. The second is more translational: testing
+        long-standing hypotheses about why modern environments
+        misfire on ancient immune systems, with implications for
+        public health and personalised medicine.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- III. Publications     [EDIT: PUBLICATIONS]                   -->
+  <!-- ============================================================ -->
+  <section class="block" id="publications">
+    <div class="label"><span class="num">III.</span>Publications</div>
+    <div class="body">
+      <h2>Publications.</h2>
+      <p style="color:var(--ink-soft);font-size:.95rem;">
+        See also
+        <a href="https://scholar.google.com/citations?user=k0Zg3wsAAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
+        and <a href="#" target="_blank" rel="noopener">ORCID</a>.
+        <!-- Replace # with your ORCID URL. -->
+      </p>
+
+      <h4>Peer-reviewed</h4>
+
+      <ol class="pubs">
+
+        <li class="featured">
+          <span class="meta">2024 · Nature · Cover</span>
+          <span class="title">Elevated genetic risk for multiple sclerosis emerged in steppe pastoralist populations</span>
+          <span class="authors">
+            <span class="you">Barrie, W.</span>, Yang, Y., Irving-Pease, E. K., <i>et&nbsp;al.</i>
+          </span>
+          <br><span class="venue">Nature</span> 625, 321–328.
+          <span class="links">
+            <a href="https://www.nature.com/articles/s41586-023-06618-z" target="_blank" rel="noopener">Read</a>
+            <a href="https://doi.org/10.1038/s41586-023-06618-z" target="_blank" rel="noopener">DOI</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2024 · Nature</span>
+          <span class="title">The selection landscape and genetic legacy of ancient Eurasians</span>
+          <span class="authors">
+            Irving-Pease, E. K.<span class="jf">§</span>,
+            <span class="you">Barrie, W.<span class="jf">§</span></span>, <i>et&nbsp;al.</i>
+          </span>
+          <br><span class="venue">Nature</span> 625, 312–320.
+          <span class="links">
+            <a href="https://www.nature.com/articles/s41586-023-06705-1" target="_blank" rel="noopener">Read</a>
+            <a href="https://doi.org/10.1038/s41586-023-06705-1" target="_blank" rel="noopener">DOI</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2024 · Nature</span>
+          <span class="title">Population genomics of post-glacial western Eurasia</span>
+          <span class="authors">
+            Allentoft, M. E.<span class="jf">§</span>,
+            <span class="you">Barrie, W.<span class="jf">§</span></span>, <i>et&nbsp;al.</i>
+          </span>
+          <br><span class="venue">Nature</span> 625, 301–311.
+          <span class="links">
+            <a href="https://www.nature.com/articles/s41586-023-06865-0" target="_blank" rel="noopener">Read</a>
+            <a href="https://doi.org/10.1038/s41586-023-06865-0" target="_blank" rel="noopener">DOI</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2024 · Nature Reviews Immunology</span>
+          <span class="title">Ancient DNA reveals evolutionary origins of autoimmune diseases</span>
+          <span class="authors">
+            <span class="you">Barrie, W.<span class="jf">§</span></span>,
+            Irving-Pease, E. K.<span class="jf">§</span>, Willerslev, E.,
+            Iversen, A. K. N., Fugger, L.
+          </span>
+          <br><span class="venue">Nature Reviews Immunology</span> 24, 85–86.
+          <span class="links">
+            <a href="https://www.nature.com/articles/s41577-023-00983-6" target="_blank" rel="noopener">Read</a>
+            <a href="https://doi.org/10.1038/s41577-023-00983-6" target="_blank" rel="noopener">DOI</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2024 · Nature</span>
+          <span class="title">100 ancient genomes show repeated population turnovers in Neolithic Denmark</span>
+          <span class="authors">
+            Allentoft, M. E., <i>et&nbsp;al.</i> (incl. <span class="you">Barrie, W.</span>)
+          </span>
+          <br><span class="venue">Nature</span> 625, 329–337.
+          <span class="links">
+            <a href="https://www.nature.com/articles/s41586-023-06862-3" target="_blank" rel="noopener">Read</a>
+            <a href="https://doi.org/10.1038/s41586-023-06862-3" target="_blank" rel="noopener">DOI</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2026 · Revue Neurologique</span>
+          <span class="title">The evolutionary origins of multiple sclerosis</span>
+          <span class="authors">
+            <span class="you">Barrie, W.</span>
+          </span>
+          <br><span class="venue">Revue Neurologique</span>.
+          <span class="links">
+            <a href="https://doi.org/10.1016/j.neurol.2026.03.004" target="_blank" rel="noopener">DOI</a>
+          </span>
+        </li>
+
+      </ol>
+
+      <h4>Preprints &amp; under review</h4>
+
+      <ol class="pubs">
+
+        <li>
+          <span class="meta">2024 · Nature (in review)</span>
+          <span class="title">Steppe ancestry in western Eurasia and the spread of the Germanic languages</span>
+          <span class="authors">
+            McColl, H., <i>…</i> <span class="you">Barrie, W.</span>, <i>…</i> Willerslev, E.
+          </span>
+          <span class="links">
+            <a href="https://www.biorxiv.org/content/10.1101/2024.03.13.584607v2" target="_blank" rel="noopener">bioRxiv</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2025 · Nature (in review)</span>
+          <span class="title">Tracing the spread of Celtic languages using ancient genomics</span>
+          <span class="authors">
+            McColl, H., <i>…</i> <span class="you">Barrie, W.</span>, <i>…</i> Willerslev, E.
+          </span>
+          <span class="links">
+            <a href="https://www.biorxiv.org/content/10.1101/2025.02.28.640770v3" target="_blank" rel="noopener">bioRxiv</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="meta">2026 · preprint</span>
+          <span class="title">Converging evidence of positive selection at height-associated loci in Europe</span>
+          <span class="authors">
+            Hivert, V., <i>…</i> <span class="you">Barrie, W.</span>, <i>…</i> Yengo, L.
+          </span>
+          <span class="links">
+            <a href="https://www.biorxiv.org/content/10.64898/2026.01.27.702172v1" target="_blank" rel="noopener">bioRxiv</a>
+          </span>
+        </li>
+
+      </ol>
+
+      <h4>In preparation</h4>
+
+      <ol class="pubs">
+
+        <li>
+          <span class="meta">2026 · in preparation</span>
+          <span class="title">Adaptive admixture from Africa shaped European immunity</span>
+          <span class="authors">
+            <span class="you">Barrie, W.</span>, <i>et&nbsp;al.</i>
+          </span>
+          <span class="links" style="font-style:italic;">Available upon request.</span>
+        </li>
+
+        <li>
+          <span class="meta">2026 · in preparation</span>
+          <span class="title">The origins of autoimmunity in prehistoric Europe</span>
+          <span class="authors">
+            <span class="you">Barrie, W.</span>, <i>et&nbsp;al.</i>
+          </span>
+        </li>
+
+      </ol>
+
+      <p class="pubs-note">
+        <span class="jf">§</span>&nbsp;denotes joint first authorship.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- IV. Talks            [EDIT: TALKS]                           -->
+  <!-- ============================================================ -->
+  <section class="block" id="talks">
+    <div class="label"><span class="num">IV.</span>Talks</div>
+    <div class="body">
+      <h2>Selected talks.</h2>
+
+      <ul class="talks">
+
+        <li>
+          <span class="when">Jun 2026</span>
+          <span>
+            <span class="what">Annual Meeting of the French Neurology Society</span>
+            <span class="keynote">Keynote</span>
+            <span class="where">Paris</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Apr 2026</span>
+          <span>
+            <span class="what">Workshop on Zoonoses in Prehistory</span>
+            <span class="where">All Souls College, Oxford</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Aug 2025</span>
+          <span>
+            <span class="what">Ancient DNA Summer Course</span>
+            <span class="where">University of Copenhagen</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">May 2025</span>
+          <span>
+            <span class="what">Genetics &amp; Epidemiology Seminar</span>
+            <span class="where">Department of Statistics, Oxford</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Feb 2025</span>
+          <span>
+            <span class="what">Sindem4Juniors</span>
+            <span class="where">Italy</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Jul 2024</span>
+          <span>
+            <span class="what">Ancient DNA Seminar</span>
+            <span class="where">The Francis Crick Institute, London</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Jun 2024</span>
+          <span>
+            <span class="what">Departmental Seminar</span>
+            <span class="where">International Laboratory for Human Genome Research (LIIGH-UNAM), Mexico</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">May 2024</span>
+          <span>
+            <span class="what">The Tizard Lecture</span>
+            <span class="where">Westminster School, London</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Mar 2024</span>
+          <span>
+            <span class="what">Neurogenomics Seminar</span>
+            <span class="where">UK Dementia Research Institute</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Dec 2022</span>
+          <span>
+            <span class="what">Departmental Seminar</span>
+            <span class="where">Danish Multiple Sclerosis Centre, Copenhagen</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Oct 2022</span>
+          <span>
+            <span class="what">Department of Integrative Biology</span>
+            <span class="where">UC Berkeley</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Apr 2022</span>
+          <span>
+            <span class="what">Lundbeck Foundation</span>
+            <span class="where">Copenhagen</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Mar 2022</span>
+          <span>
+            <span class="what">Industry Seminar</span>
+            <span class="where">Illumina, Cambridge</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Oct 2021</span>
+          <span>
+            <span class="what">GeoGenetics Conference</span>
+            <span class="where">Lundbeck Foundation, Copenhagen</span>
+          </span>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- V. Press             [EDIT: PRESS]                           -->
+  <!-- ============================================================ -->
+  <section class="block" id="press">
+    <div class="label"><span class="num">V.</span>In&nbsp;the&nbsp;press</div>
+    <div class="body">
+      <h2>Selected coverage.</h2>
+      <p>The 2024 <i>Nature</i> papers were covered in over 700 pieces
+      of international media. A representative selection below.</p>
+
+      <h4>Broadcast</h4>
+      <ul class="press">
+        <li>
+          <span class="outlet">BBC One</span>
+          <span>Six O'Clock News (television)</span>
+        </li>
+        <li>
+          <span class="outlet">BBC Radio 4</span>
+          <span>PM, Six O'Clock News</span>
+        </li>
+        <li>
+          <span class="outlet">BBC World Service</span>
+          <span>News at 6, &amp; <i>Science in Action</i></span>
+        </li>
+        <li>
+          <span class="outlet">BBC Radio Scotland</span>
+          <span>News &amp; current affairs</span>
+        </li>
+        <li>
+          <span class="outlet">ITV Anglia</span>
+          <span>News at 6 (television)</span>
+        </li>
+      </ul>
+
+      <h4>Print &amp; online</h4>
+      <ul class="press">
+        <li>
+          <span class="outlet">The New York Times</span>
+          <span><a href="https://www.nytimes.com/2024/01/10/science/ancient-human-genes-multiple-sclerosis.html" target="_blank" rel="noopener">Ancient skeletons give clues to modern medical mysteries</a></span>
+        </li>
+        <li>
+          <span class="outlet">The Washington Post</span>
+          <span><a href="https://www.washingtonpost.com/science/2024/01/10/ancient-dna-multiple-sclerosis-european-ancestry/" target="_blank" rel="noopener">Ancient DNA helps trace multiple sclerosis origins in European descendants</a></span>
+        </li>
+        <li>
+          <span class="outlet">The Guardian</span>
+          <span><a href="https://www.theguardian.com/science/2024/jan/10/ancient-steppe-herders-brought-higher-risk-of-ms-to-northern-europe" target="_blank" rel="noopener">Ancient steppe herders brought higher risk of MS to northern Europe</a></span>
+        </li>
+        <li>
+          <span class="outlet">BBC News</span>
+          <span><a href="https://www.bbc.co.uk/news/health-67917294" target="_blank" rel="noopener">Scientists crack mystery of how MS gene spread</a></span>
+        </li>
+        <li>
+          <span class="outlet">The Times</span>
+          <span><a href="#" target="_blank" rel="noopener">Ancient gene shows why Britons are more likely to have multiple sclerosis</a></span>
+          <!-- Times paywalled — link from your saved cutting if you have one. -->
+        </li>
+        <li>
+          <span class="outlet">Reuters</span>
+          <span><a href="#" target="_blank" rel="noopener">DNA from ancient Europeans reveals surprising multiple sclerosis origins</a></span>
+        </li>
+        <li>
+          <span class="outlet">Financial Times</span>
+          <span><a href="https://www.ft.com/content/4c6177c3-70f0-49f7-90f4-3da29cffb6dc" target="_blank" rel="noopener">Ancient European migration patterns linked to modern-day disease risks</a></span>
+        </li>
+        <li>
+          <span class="outlet">CNN</span>
+          <span><a href="https://www.cnn.com/2024/01/11/health/ancient-human-dna-multiple-sclerosis-alzheimers-scn/index.html" target="_blank" rel="noopener">Gene that protected humans 5,000 years ago may be linked to debilitating modern disease</a></span>
+        </li>
+        <li>
+          <span class="outlet">CBS News</span>
+          <span><a href="https://www.cbsnews.com/news/ancient-human-dna-northern-europeans-multiple-sclerosis-risk/" target="_blank" rel="noopener">Ancient human DNA helps explain why northern Europeans have higher MS risk</a></span>
+        </li>
+        <li>
+          <span class="outlet">NBC News</span>
+          <span><a href="https://www.nbcnews.com/health/health-news/ancient-dna-multiple-sclerosis-risk-northern-europeans-rcna133465" target="_blank" rel="noopener">Why MS affects so many people of northern European ancestry</a></span>
+        </li>
+        <li>
+          <span class="outlet">ABC News</span>
+          <span><a href="https://abcnews.go.com/Health/wireStory/ancient-human-dna-hints-modern-disease-affects-northern-106259123" target="_blank" rel="noopener">Ancient human DNA hints at why a modern disease affects so many northern Europeans</a></span>
+        </li>
+        <li>
+          <span class="outlet">The Independent</span>
+          <span><a href="https://www.independent.co.uk/news/science/dna-europe-alzheimer-asia-adhd-b2476439.html" target="_blank" rel="noopener">Ancient DNA reveals reason for high MS and Alzheimer's rates in Europe</a></span>
+        </li>
+        <li>
+          <span class="outlet">Newsweek</span>
+          <span><a href="https://www.newsweek.com/multiple-sclerosis-more-prevalent-america-ancient-sheep-farming-1859507" target="_blank" rel="noopener">MS is more prevalent in America due to ancient sheep farming</a></span>
+        </li>
+        <li>
+          <span class="outlet">Daily Mail</span>
+          <span><a href="https://www.dailymail.co.uk/sciencetech/article-12947099/The-startling-origin-MS-Genes-neurodegenerative-disease-introduced-north-western-Europe-5-000-years-ago-sheep-cattle-herders-migrating-east-study-finds.html" target="_blank" rel="noopener">The 'startling' origin of MS</a></span>
+        </li>
+        <li>
+          <span class="outlet">Evening Standard</span>
+          <span><a href="https://www.standard.co.uk/news/science/dna-europe-alzheimer-asia-adhd-b1131520.html" target="_blank" rel="noopener">Ancient DNA reveals reason for high MS and Alzheimer's rates</a></span>
+        </li>
+        <li>
+          <span class="outlet">ITV News</span>
+          <span><a href="https://www.itv.com/news/anglia/2024-01-10/study-of-ancient-dna-huge-leap-forward-in-understanding-evolution-of-ms" target="_blank" rel="noopener">A huge leap forward in our understanding of the evolution of MS</a></span>
+        </li>
+        <li>
+          <span class="outlet">Science (AAAS)</span>
+          <span><a href="https://www.science.org/content/article/you-may-have-higher-risk-ms-and-other-diseases-if-you-re-descended-these-ancient-people" target="_blank" rel="noopener">A higher risk of MS in descendants of ancient herders</a></span>
+        </li>
+        <li>
+          <span class="outlet">Science News</span>
+          <span><a href="https://www.sciencenews.org/article/yamnaya-herders-dna-europeans-genetic-multiple-sclerosis" target="_blank" rel="noopener">How ancient herders rewrote northern Europeans' genetic story</a></span>
+        </li>
+        <li>
+          <span class="outlet">Nature News</span>
+          <span><a href="https://www.nature.com/articles/d41586-024-00024-9" target="_blank" rel="noopener">Ancient DNA reveals origins of multiple sclerosis in Europe</a></span>
+        </li>
+        <li>
+          <span class="outlet">Le Figaro / FAZ / NZZ</span>
+          <span>Major coverage in French, German, Swiss, Spanish, Italian, Korean and Brazilian press</span>
+        </li>
+      </ul>
+
+      <p style="font-size:.88rem;color:var(--ink-mute);margin-top:1.4rem;">
+        Coverage spanned more than 700 pieces in 30+ countries, with a
+        combined potential reach approaching one billion. Cambridge
+        press office report and full coverage list available on request.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- VI. Awards           [EDIT: AWARDS]                          -->
+  <!-- ============================================================ -->
+  <section class="block" id="awards">
+    <div class="label"><span class="num">VI.</span>Awards</div>
+    <div class="body">
+      <h2>Scholarships &amp; awards.</h2>
+
+      <ul class="awards">
+        <li>
+          <span class="yr">2024–2027</span>
+          <span><strong>Neville Junior Research Fellowship</strong> &middot; Magdalene College, Cambridge</span>
+        </li>
+        <li>
+          <span class="yr">2019–2022</span>
+          <span><strong>Hanne &amp; Torkel Weis-Fogh Studentship</strong> &middot; Department of Zoology, Cambridge</span>
+        </li>
+        <li>
+          <span class="yr">2018</span>
+          <span><strong>Horne Prize for Physical Sciences</strong> &middot; Clare College, Cambridge</span>
+        </li>
+        <li>
+          <span class="yr">2018</span>
+          <span><strong>Honorary Scholarship</strong> &middot; Clare College, Cambridge</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- VII. Contact         [EDIT: CONTACT]                         -->
+  <!-- ============================================================ -->
+  <section class="block" id="contact">
+    <div class="label"><span class="num">VII.</span>Contact</div>
+    <div class="body">
+      <h2>Get in touch.</h2>
+      <p>
+        For research enquiries, collaborations, or media requests please
+        write to the address below. I aim to reply within a week,
+        though during teaching term this can run longer.
+      </p>
+
+      <dl class="contact-grid">
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:wb275@cam.ac.uk">wb275@cam.ac.uk</a></dd>
+        </div>
+        <div>
+          <dt>Department</dt>
+          <dd>Department of Genetics, University of Cambridge</dd>
+        </div>
+        <div>
+          <dt>College</dt>
+          <dd>Magdalene College, Cambridge CB3 0AG</dd>
+        </div>
+        <div>
+          <dt>Elsewhere</dt>
+          <dd>
+            <a href="https://scholar.google.com/citations?user=k0Zg3wsAAAAJ" target="_blank" rel="noopener">Scholar</a> ·
+            <a href="#" target="_blank" rel="noopener">ORCID</a> ·
+            <a href="#" target="_blank" rel="noopener">Bluesky</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+
+  <footer>
+    <span>© William Barrie · Cambridge</span>
+    <span>Last updated <time datetime="2026-04">April&nbsp;2026</time></span>
+  </footer>
+
+</div>
+
+</body>
+</html>
